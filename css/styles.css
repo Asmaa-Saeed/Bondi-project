@@ -1,0 +1,84 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #de0526;
+    --yellow-color: #ffc400;
+    
+}
+
+body {
+    font-family: "Roboto";
+}
+
+
+/* main btn */
+.main-btn {
+    background-color:var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+    background-color: #c40320 ;
+    color: #ffd11b ;
+}
+/* end main btn */
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    bottom: -20px;
+    left:50% ;
+    transform: translateX(-50%);
+}
+
+/* start navbar */
+.navbar {
+    background-color: var(--dark-color);
+    /* height: 10000px; */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link.active, 
+.navbar .navbar-nav .nav-link:focus, 
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+    color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+   border-color: var(--green-color);
+}
+/* end navbar */
+
+
+/* start landing */
+    .landing {
+        background-color: var(--dark-color);
+        min-height: calc(100vh - 72px);
+    }
+
+ 
+/* end landing */
