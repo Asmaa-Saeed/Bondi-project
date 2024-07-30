@@ -3,11 +3,16 @@
     --green-color: #33d1cc;
     --red-color: #de0526;
     --yellow-color: #ffc400;
-    
+    --section-color:#eff7fa;
+    --main-transition: 0.3s;
 }
 
 body {
     font-family: "Roboto";
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -16,6 +21,7 @@ body {
     background-color:var(--red-color);
     color: var(--yellow-color);
     padding: 0.5rem 1rem;
+    transition: var(--main-transition);
 }
 
 .main-btn:hover {
@@ -82,3 +88,144 @@ body {
 
  
 /* end landing */
+
+/* start features */
+.features .feat .icon-holder {
+    height: 200px;
+}
+
+.features .feat .icon-holder .svg {
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+.features .feat .icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+    margin-left: -50px;
+}
+
+
+.features .feat .icon-holder .icon {
+    color: var(--green-color);
+    margin-left: -50px;
+
+}
+.features  .feat h4 {
+    color: var(--yellow-color) ;
+}
+/* end features */
+
+/* start our work section */
+.our-work {
+    background-color: var(--section-color);
+}
+
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    transition:var(--main-transition);
+}
+.our-work ul .active:hover {
+    background-color: #c40320 ;
+    color: #ffd11b ;
+}
+
+.our-work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.our-work ul li:not(.active):hover {
+    color: var(--yellow-color);
+}
+
+.our-work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background: #33d1cc9a;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: var(--main-transition);
+    font-size:1.5rem ;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+    transform: translateX(0px);
+  }
+/* end our work section */
+
+/* start stuff section  */
+.stuff  .description{
+    max-width: 500px;
+    /* margin-left: 300px; */
+}
+/* end stuff section  */
+
+/* start team section */
+.team {
+    background-color: var(--section-color);
+}
+.team h2 {
+    color: var(--yellow-color);
+    margin-top: 20px;
+}
+
+.team .box h4 {
+    background-color: var(--green-color);
+    padding: 15px;
+}
+
+/* end team section */
+
+/* start project */
+.project {
+    background-color: var(--dark-color);
+}
+/* end project */
+
+/* start subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type = "email"] {
+    border: none;
+    border-bottom: 1px solid white ;
+}
+
+.subscribe input[type = "email"]:focus {
+    outline: none;
+}
+
+.subscribe ::placeholder {
+    color: white;
+}
+.subscribe  input[type = "submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+.subscribe  input[type = "submit"]:hover {
+    background-color:#05265a ;
+}
+/* end subscribe */
+
+/* start footer */
+.footer {
+    background-color: var(--dark-color);
+}
+/* end footer */
